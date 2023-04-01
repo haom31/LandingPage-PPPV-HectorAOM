@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+.linea {
+    border-top: 3px solid black;
+    margin: 20px 0px 20px 0px;
+}
+
+/* TITULO ********************************/
+h1 {
+    text-align: center;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+/* CABECERA ********************************/
+header {
+    position: relative;
+    padding: 1rem 0;
+}
+.cabecera {
+    background-color: black;
+    color: white;
+}
+.datosYo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+
+/* DATOS EN CABECERA *********************/
+.top-left {
+    flex: 1 1 0%;
+    align-items: center;
+    display: flex;
+}
+
+.image-content {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.foto-perfil {
+    width: 100px;
+    border-radius: 33px;
+}
+
+.nombreApellido {
+    margin-left: 10px;
+    text-align: center;
+}
+
+/* Boton de email *********************/
+.contacto {
+    border-color: black;
+    border-radius: 20px;
+    border-width: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.25rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    background-color: white;
+    width: 100px;
+
+}
+/*SCRIPT - personalizar experiencia *************/
+.formaInput {
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.formaInput h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+input {
+    padding: 10px;
+}
+button {
+    padding: 5px;
+    width: 3%;
+    cursor: pointer;
+    margin: 15px 0;
+    border-radius: 100%;
+    border: none;
+    background-color: yellow
+}
+
+
+/* CUADRICULA DE IMAGENES ******************/
+.cuerpo {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.cuerpo .imagen {
+    width: 32%;
+    position: relative;
+    height: 250px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+/* tamaño de la imagen en la cuadrícula */
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* superposición del texto de la imagen */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 118, 192, 0.2);
+    width: 100%;
+    height: 0;
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+/* transición del texto de la imagen */
+.overlay .textoDesp {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* al pasar el cursor aplicar el overlay */
+.imagen:hover .overlay {
+    height: 100%;
+    cursor: pointer;
+}
+
+/* RRSS *************************************/
+
+.RRSS {
+    background-color: black;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    ;
+    color: white;
+}
+
+.RRSS .rrssTxt {
+    font-size: small;
+    border-color: black;
+    border-radius: 20px;
+    border-width: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    background-color: white;
+   color: rgb(0, 0, 0);
+}
+
+
+/* AJUSTE POR TAMAÑO DE PANTALLA ********************************/
+@media screen and (max-width: 1000px) {
+    .cuerpo {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .cuerpo {
+        width: 90%;
+    }
+    .cuerpo .imagen {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    h1 {
+        font-size: 22px;
+    }
+    .cuerpo {
+        width: 90%;
+    }
+    .cuerpo .imagen {
+        width: 80%;
+    }
+}
